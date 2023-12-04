@@ -5,6 +5,15 @@ const massage = document.querySelector("#error-massage");
 const numOfNotes = document.querySelectorAll("#no-of-notes");
 const cashcontainer = document.querySelector(".cash-container");
 
+bill.addEventListener("input", showCashAmountInput);
+
+function showCashAmountInput() {
+  if (this.value !== "") {
+    cashcontainer.style.display = "block";
+  } else {
+    cashcontainer.style.display = "none";
+  }
+}
 
 function returnAmount() {
   // change amount value string to number
@@ -13,10 +22,12 @@ function returnAmount() {
 
   if (billvalue > 0) {
     if (cashvalue > billvalue) {
+        massage.style.display = "none"
       let returnvalue = cashvalue - billvalue;
       numberOfNotes(returnvalue);
     } else {
-        showError("cash amount must be greater than bill amount");
+      showError("cash amount must be greater than bill amount");
+      numberOfNotes();
     }
   } else {
     showError("bill not valid");
@@ -34,9 +45,11 @@ function numberOfNotes(returnvalue) {
       numOfNotes[i].innerText = null;
     }
   }
+  showCashAmountInput();
 }
-function showError(msg){
-  massage.innerText = msg
+function showError(msg) {
+  massage.style.display = "block";
+  massage.innerText = msg;
 }
 
 checkbtn.addEventListener("click", returnAmount);

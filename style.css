@@ -47,6 +47,10 @@ input:focus {
     outline: none;
 }
 
+.cash-container {
+    display: none;
+}
+
 button {
     display: block;
     margin: 1rem auto;
@@ -61,6 +65,7 @@ button {
 
 #error-massage {
     color: red;
+    display: none;
 }
 
 h3 {
@@ -108,4 +113,3 @@ footer {
 .link i {
     font-size: 2rem;
 }
-
