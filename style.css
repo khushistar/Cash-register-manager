@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    width: 30%;
+    width: 45%;
     margin: 5rem auto 0;
     background-color: #333393;
     padding: 2rem;
@@ -60,7 +60,7 @@ input:focus {
 button {
     display: block;
     margin: 1rem auto;
-    padding: 0.5rem 3rem;
+    padding: 0.3rem 1.2rem;
     font-size: 1.2rem;
     border: none;
     border-radius: 0.4rem;
@@ -90,7 +90,7 @@ th,
 td {
     text-align: center;
     border: 2px solid #7c3aed;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 footer {
