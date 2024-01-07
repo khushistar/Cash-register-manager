@@ -131,8 +131,8 @@ footer {
     .container {
         width: 82%;
     }
-
-    #error-massage {
+ 
+    #error-massage{
         font-size: 16px;
     }
 }
